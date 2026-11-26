@@ -1,0 +1,23 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Subtle Handcrafted Blossom Silhouette 1 -->
+  <g fill="none" stroke="#ff9bb2" stroke-width="1.2" opacity="0.10" transform="translate(30, 30)">
+    <circle cx="0" cy="-8" r="6"/>
+    <circle cx="8" cy="-2" r="6"/>
+    <circle cx="5" cy="7" r="6"/>
+    <circle cx="-5" cy="7" r="6"/>
+    <circle cx="-8" cy="-2" r="6"/>
+    <circle cx="0" cy="0" r="2.5" fill="#ff9bb2"/>
+  </g>
+  <!-- Subtle Handcrafted Blossom Silhouette 2 -->
+  <g fill="none" stroke="#ff9bb2" stroke-width="1" opacity="0.08" transform="translate(90, 85) scale(0.75)">
+    <circle cx="0" cy="-8" r="6"/>
+    <circle cx="8" cy="-2" r="6"/>
+    <circle cx="5" cy="7" r="6"/>
+    <circle cx="-5" cy="7" r="6"/>
+    <circle cx="-8" cy="-2" r="6"/>
+    <circle cx="0" cy="0" r="2.5" fill="#ff9bb2"/>
+  </g>
+  <!-- Whispering Sparkle Star -->
+  <path d="M60 70 Q60 76 66 76 Q60 76 60 82 Q60 76 54 76 Q60 76 60 70 Z" fill="#ff9bb2" opacity="0.09"/>
+  <path d="M105 25 Q105 29 109 29 Q105 29 105 33 Q105 29 101 29 Q105 29 105 25 Z" fill="#ff9bb2" opacity="0.08"/>
+</svg>

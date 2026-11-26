@@ -131,7 +131,7 @@ const PRODUCTS = [
     price: 3200,
     rating: 5.0,
     reviews: 15,
-    badge: "Limited",
+    badge: "Bestseller",
     badgeType: "bestseller",
     image: "assets/doll.jpg?v=2",
     thumbs: ["assets/doll.jpg?v=2", "assets/hair-clips.jpg", "assets/keychain.jpg"],
@@ -543,7 +543,7 @@ function renderCatalog() {
   const spotlight = document.getElementById("newArrivalsGrid");
   const emptyState = document.getElementById("catalogEmptyState");
   const resultsCount = document.getElementById("resultsCountText");
-  if (!grid) return;
+  if (!grid && !spotlight) return;
 
   // Filter list
   let list = PRODUCTS.filter(p => {
@@ -606,29 +606,33 @@ function renderCatalog() {
     </article>
   `;
 
-  // Render main catalog
-  grid.innerHTML = list.map(createCardHTML).join("");
+  // Render main catalog if grid exists
+  if (grid) {
+    grid.innerHTML = list.map(createCardHTML).join("");
 
-  // Update empty state
-  if (emptyState) emptyState.hidden = list.length > 0;
-  if (resultsCount) {
-    resultsCount.innerHTML = `Showing <strong>${list.length}</strong> handmade treasure${list.length === 1 ? "" : "s"}${State.activeCategory !== "All" ? ` in <em>${State.activeCategory}</em>` : ""}`;
+    // Update empty state
+    if (emptyState) emptyState.hidden = list.length > 0;
+    if (resultsCount) {
+      resultsCount.innerHTML = `Showing <strong>${list.length}</strong> handmade treasure${list.length === 1 ? "" : "s"}${State.activeCategory !== "All" ? ` in <em>${State.activeCategory}</em>` : ""}`;
+    }
+
+    const activeFiltersBadge = document.getElementById("activeFiltersBadge");
+    if (activeFiltersBadge) {
+      let count = 0;
+      if (State.activeCategory !== "All") count++;
+      if (State.activeColor !== "all") count++;
+      if (State.activeSize !== "all") count++;
+      if (State.maxPrice < 6000) count++;
+      if (State.searchQuery) count++;
+      activeFiltersBadge.textContent = count > 0 ? `${count} Active` : "All";
+    }
   }
 
-  const activeFiltersBadge = document.getElementById("activeFiltersBadge");
-  if (activeFiltersBadge) {
-    let count = 0;
-    if (State.activeCategory !== "All") count++;
-    if (State.activeColor !== "all") count++;
-    if (State.activeSize !== "all") count++;
-    if (State.maxPrice < 6000) count++;
-    if (State.searchQuery) count++;
-    activeFiltersBadge.textContent = count > 0 ? `${count} Active` : "All";
-  }
-
-  // Render New Arrivals spotlight (first 4 items)
+  // Render Best Selling Spotlight (Top 5 Best Selling Items)
   if (spotlight) {
-    const spotlightItems = PRODUCTS.slice(0, 4);
+    const bestSellerIds = [1, 2, 5, 7, 9];
+    const spotlightItems = PRODUCTS.filter(p => bestSellerIds.includes(p.id))
+                                   .sort((a, b) => bestSellerIds.indexOf(a.id) - bestSellerIds.indexOf(b.id));
     spotlight.innerHTML = spotlightItems.map(createCardHTML).join("");
   }
 }
@@ -1083,6 +1087,9 @@ const MOCK_ORDERS = {
 };
 
 function trackOrder(orderId) {
+  const displayId = document.getElementById("trackDisplayId");
+  if (!displayId) return; // not on tracker page
+
   const cleanId = orderId.trim().toUpperCase();
   const order = MOCK_ORDERS[cleanId] || {
     id: cleanId,
@@ -1095,9 +1102,11 @@ function trackOrder(orderId) {
   sounds.playChime();
 
   // Populate data
-  document.getElementById("trackDisplayId").textContent = order.id;
-  document.getElementById("trackDisplayItems").textContent = order.dest ? order.items : "Handmade Craft Item";
-  document.getElementById("trackDisplayDest").textContent = order.dest;
+  displayId.textContent = order.id;
+  const displayItems = document.getElementById("trackDisplayItems");
+  if (displayItems) displayItems.textContent = order.dest ? order.items : "Handmade Craft Item";
+  const displayDest = document.getElementById("trackDisplayDest");
+  if (displayDest) displayDest.textContent = order.dest;
 
   // Update dates
   for (let i = 1; i <= 5; i++) {
@@ -1291,8 +1300,13 @@ document.addEventListener("DOMContentLoaded", () => {
   if (headerSearch) {
     headerSearch.addEventListener("click", () => {
       sounds.playPop();
-      document.querySelector("#shop").scrollIntoView({ behavior: "smooth" });
-      setTimeout(() => catalogSearch && catalogSearch.focus(), 400);
+      const shopSec = document.querySelector("#shop");
+      if (shopSec && catalogSearch) {
+        shopSec.scrollIntoView({ behavior: "smooth" });
+        setTimeout(() => catalogSearch.focus(), 400);
+      } else {
+        window.location.href = "shop.html";
+      }
     });
   }
 
@@ -1372,15 +1386,18 @@ document.addEventListener("DOMContentLoaded", () => {
     card.addEventListener("click", () => {
       sounds.playPop();
       const cat = card.dataset.category;
-      State.activeCategory = cat;
+      if (document.getElementById("mainProductGrid")) {
+        State.activeCategory = cat;
 
-      // Update chip buttons active states
-      document.querySelectorAll(".chip-btn").forEach(chip => {
-        chip.classList.toggle("active", chip.dataset.filter === cat);
-      });
+        // Update chip buttons active states
+        document.querySelectorAll(".chip-btn").forEach(chip => {
+          chip.classList.toggle("active", chip.dataset.filter === cat);
+        });
 
-      renderCatalog();
-      document.querySelector("#shop").scrollIntoView({ behavior: "smooth" });
+        renderCatalog();
+        const shopSec = document.querySelector("#shop");
+        if (shopSec) shopSec.scrollIntoView({ behavior: "smooth" });
+      }
     });
   });
 
@@ -1744,8 +1761,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Initial tracker run with sample order
-  trackOrder("SB-2026-88");
+  // Initial tracker run with sample order if on tracker page
+  if (trackInput) {
+    trackOrder("SB-2026-88");
+  }
 
   // 18. Gallery Filter Chips (Ref 2)
   document.querySelectorAll(".g-filter").forEach(btn => {
@@ -1882,6 +1901,54 @@ document.addEventListener("DOMContentLoaded", () => {
   const customBtn = document.getElementById("heroCustomOrderBtn");
   if (exploreBtn) exploreBtn.addEventListener("mouseenter", () => sounds.playHarp(659.25));
   if (customBtn) customBtn.addEventListener("mouseenter", () => sounds.playHarp(880.00));
+
+  // 25. FAQ Accordion Toggle System
+  document.querySelectorAll(".faq-item").forEach(item => {
+    const btn = item.querySelector(".faq-question-btn");
+    if (btn) {
+      btn.addEventListener("click", () => {
+        sounds.playPop();
+        const isOpen = item.classList.contains("is-active");
+        const parent = item.closest(".faq-accordion-container");
+        if (parent) {
+          parent.querySelectorAll(".faq-item").forEach(i => i.classList.remove("is-active"));
+        }
+        if (!isOpen) {
+          item.classList.add("is-active");
+        }
+      });
+    }
+  });
+
+  // 26. Multi-Page URL Query Parameter Deep Linking
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const catParam = urlParams.get("category");
+    if (catParam) {
+      State.activeCategory = catParam;
+      document.querySelectorAll(".chip-btn").forEach(c => {
+        const matches = (c.dataset.filter || "").toLowerCase() === catParam.toLowerCase();
+        c.classList.toggle("active", matches);
+      });
+      renderCatalog();
+    }
+    const searchParam = urlParams.get("search");
+    if (searchParam) {
+      State.searchQuery = searchParam;
+      if (catalogSearch) {
+        catalogSearch.value = searchParam;
+        if (searchClear) searchClear.hidden = false;
+      }
+      renderCatalog();
+    }
+    const trackParam = urlParams.get("id");
+    if (trackParam && trackInput) {
+      trackInput.value = trackParam;
+      trackOrder(trackParam);
+    }
+  } catch (err) {
+    console.warn("URL params parsing error:", err);
+  }
 });
 
 // Global functions for inline HTML calls

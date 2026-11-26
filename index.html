@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700&display=swap" rel="stylesheet">
   
   <!-- Core Stylesheet -->
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css?v=8" />
 </head>
 <body>
 
@@ -129,7 +129,7 @@
     <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
     <div class="header-inner">
       <!-- Brand Logo -->
-      <a href="#home" class="brand-logo" aria-label="S.bloomora Home">
+      <a href="index.html" class="brand-logo" aria-label="S.bloomora Home">
         <div class="logo-mark">
           <svg class="bow-svg" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M50 40C35 25 10 20 5 40C0 60 30 65 48 45" fill="var(--theme-primary)" opacity="0.9"/>
@@ -148,16 +148,16 @@
 
       <!-- Desktop Navigation Menu -->
       <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
-        <a href="#home" class="nav-link active">Home</a>
-        <a href="#shop" class="nav-link">Shop</a>
-        <a href="#custom-order" class="nav-link highlight-pill">Custom Order</a>
-        <a href="#track-order" class="nav-link">Track Order</a>
-        <a href="#about" class="nav-link">Our Story</a>
-        <a href="#gallery" class="nav-link">Gallery</a>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="custom-order.html" class="nav-link highlight-pill">Custom Order</a>
+        <a href="track-order.html" class="nav-link">Track Order</a>
+        <a href="about.html" class="nav-link">Our Story</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
 
-      <!-- Header Action Buttons (Refined SVG Icons) -->
+      <!-- Header Action Buttons -->
       <div class="header-actions">
         <!-- Live Color Theme Studio Toggle -->
         <button class="action-btn theme-toggle-btn" id="themeStudioToggle" title="Color Theme Studio" aria-label="Open Theme Studio">
@@ -179,7 +179,7 @@
           </svg>
         </button>
 
-        <!-- Search Button -->
+        <!-- Search Button (links to shop) -->
         <button class="action-btn search-trigger-btn" id="headerSearchBtn" title="Search catalogue" aria-label="Search">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8"></circle>
@@ -226,13 +226,13 @@
       <button class="drawer-close-btn" id="closeMobileNav" aria-label="Close menu">✕</button>
     </div>
     <div class="mobile-nav-links">
-      <a href="#home" class="mobile-link">Home</a>
-      <a href="#shop" class="mobile-link">Shop Collection</a>
-      <a href="#custom-order" class="mobile-link">Custom Order Commission</a>
-      <a href="#track-order" class="mobile-link">Track Your Order</a>
-      <a href="#about" class="mobile-link">Our Story</a>
-      <a href="#gallery" class="mobile-link">Studio Gallery</a>
-      <a href="#contact" class="mobile-link">Contact & Support</a>
+      <a href="index.html" class="mobile-link active">Home</a>
+      <a href="shop.html" class="mobile-link">Shop Collection</a>
+      <a href="custom-order.html" class="mobile-link">Custom Order Commission</a>
+      <a href="track-order.html" class="mobile-link">Track Your Order</a>
+      <a href="about.html" class="mobile-link">Our Story</a>
+      <a href="gallery.html" class="mobile-link">Studio Gallery</a>
+      <a href="contact.html" class="mobile-link">Contact & Support</a>
       <button type="button" class="mobile-link mobile-action-link" id="mobileWishlistBtn">
         <span>Saved Wishlist (<span id="mobileWishCount">0</span>)</span>
       </button>
@@ -253,9 +253,7 @@
 
   <!-- Main Content Container -->
   <main id="mainContent">
-
-    <!-- HERO SECTION (Ref 3 Layout with Realistic Artisanal Aesthetics) -->
-    <section class="hero-section" id="home">
+<section class="hero-section" id="home">
       <!-- Floating Botanical Petals Layer -->
       <div class="hero-petals-layer" aria-hidden="true">
         <span class="petal petal-1"></span>
@@ -287,11 +285,11 @@
           </p>
 
           <div class="hero-cta-group reveal-on-scroll" style="--reveal-delay: 0.5s;">
-            <a href="#shop" class="btn btn-primary btn-lg shadow-glow btn-shimmer" id="heroExploreBtn">
+            <a href="shop.html" class="btn btn-primary btn-lg shadow-glow btn-shimmer" id="heroExploreBtn">
               <span>Explore Collection</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
             </a>
-            <a href="#custom-order" class="btn btn-outline btn-lg" id="heroCustomOrderBtn">
+            <a href="custom-order.html" class="btn btn-outline btn-lg" id="heroCustomOrderBtn">
               <span>Custom Order</span>
             </a>
           </div>
@@ -336,9 +334,7 @@
         </div>
       </div>
     </section>
-
-    <!-- VALUE PROPOSITIONS RIBBON (Bespoke SVG Vector Icons) -->
-    <section class="benefits-ribbon">
+<section class="benefits-ribbon">
       <div class="container">
         <div class="benefits-grid">
           <!-- Benefit 1: Handmade with Love -->
@@ -401,9 +397,7 @@
         </div>
       </div>
     </section>
-
-    <!-- SHOP BY CATEGORY (Scalloped cards Ref 3 & 4) -->
-    <section class="section-categories">
+<section class="section-categories">
       <div class="container">
         <div class="section-header text-center">
           <div class="section-eyebrow">
@@ -415,797 +409,199 @@
 
         <div class="categories-row">
           <!-- Lamps -->
-          <button class="category-pill-card active reveal-on-scroll" style="--reveal-delay: 0.05s;" data-category="Lamps" aria-label="Browse Lamps">
+          <a href="shop.html?category=Lamps" class="category-pill-card active reveal-on-scroll" style="--reveal-delay: 0.05s;" data-category="Lamps" aria-label="Browse Lamps">
             <div class="scallop-ring">
               <img src="assets/lotus-lamp.jpg" alt="Handmade fairy lamps category" loading="lazy" />
             </div>
             <span class="cat-label">Fairy Lamps</span>
-          </button>
+          </a>
 
           <!-- Pots -->
-          <button class="category-pill-card reveal-on-scroll" style="--reveal-delay: 0.12s;" data-category="Pots" aria-label="Browse Flower Pots">
+          <a href="shop.html?category=Pots" class="category-pill-card reveal-on-scroll" style="--reveal-delay: 0.12s;" data-category="Pots" aria-label="Browse Flower Pots">
             <div class="scallop-ring">
               <img src="assets/tulip-pot.jpg" alt="Handmade floral pots category" loading="lazy" />
             </div>
             <span class="cat-label">Floral Pots</span>
-          </button>
+          </a>
 
           <!-- Dolls -->
-          <button class="category-pill-card reveal-on-scroll" style="--reveal-delay: 0.19s;" data-category="Dolls" aria-label="Browse Dolls">
+          <a href="shop.html?category=Dolls" class="category-pill-card reveal-on-scroll" style="--reveal-delay: 0.19s;" data-category="Dolls" aria-label="Browse Dolls">
             <div class="scallop-ring">
               <img src="assets/doll.jpg?v=2" alt="Handmade crafted dolls category" loading="lazy" />
             </div>
             <span class="cat-label">Artisan Dolls</span>
-          </button>
+          </a>
 
           <!-- Keychains -->
-          <button class="category-pill-card reveal-on-scroll" style="--reveal-delay: 0.26s;" data-category="Keychains" aria-label="Browse Keychains">
+          <a href="shop.html?category=Keychains" class="category-pill-card reveal-on-scroll" style="--reveal-delay: 0.26s;" data-category="Keychains" aria-label="Browse Keychains">
             <div class="scallop-ring">
               <img src="assets/keychain.jpg" alt="Handmade keychains category" loading="lazy" />
             </div>
             <span class="cat-label">Charm Keychains</span>
-          </button>
+          </a>
 
           <!-- Hair Clips -->
-          <button class="category-pill-card reveal-on-scroll" style="--reveal-delay: 0.33s;" data-category="Hair Clips" aria-label="Browse Hair Clips">
+          <a href="shop.html?category=Hair Clips" class="category-pill-card reveal-on-scroll" style="--reveal-delay: 0.33s;" data-category="Hair Clips" aria-label="Browse Hair Clips">
             <div class="scallop-ring">
               <img src="assets/hair-clips.jpg" alt="Handmade hair clips category" loading="lazy" />
             </div>
             <span class="cat-label">Hair Barrettes</span>
-          </button>
+          </a>
 
           <!-- Bouquets -->
-          <button class="category-pill-card reveal-on-scroll" style="--reveal-delay: 0.40s;" data-category="Bouquets" aria-label="Browse Bouquets">
+          <a href="shop.html?category=Bouquets" class="category-pill-card reveal-on-scroll" style="--reveal-delay: 0.40s;" data-category="Bouquets" aria-label="Browse Bouquets">
             <div class="scallop-ring">
               <img src="assets/bouquet.jpg" alt="Handmade flower bouquets category" loading="lazy" />
             </div>
             <span class="cat-label">Forever Bouquets</span>
-          </button>
+          </a>
         </div>
       </div>
     </section>
-
-    <!-- NEW ARRIVALS SPOTLIGHT -->
-    <section class="section-spotlight">
+<section class="section-spotlight">
       <div class="container">
         <div class="section-header-row">
           <div>
             <div class="section-eyebrow">
-              <span>Fresh Studio Pieces</span>
+              <span>Boutique Favorites</span>
             </div>
-            <h2 class="section-title">New Arrivals</h2>
+            <h2 class="section-title">Top 5 Best Selling Pieces</h2>
+            <p class="section-subtitle" style="margin-top: 6px; font-size: 14.5px;">Our top 5 most adored handcrafted creations — cherished for nightstands, desks, and heartfelt gifts.</p>
           </div>
-          <a href="#shop" class="text-cta" id="viewAllShopLink">
-            <span>View Complete Collection</span>
+          <a href="shop.html" class="text-cta" id="viewAllShopLink">
+            <span>View Complete Shop (14+ Pieces)</span>
             <span class="arrow">→</span>
           </a>
         </div>
 
         <div class="spotlight-grid" id="newArrivalsGrid">
-          <!-- Rendered dynamically by script.js -->
+          <!-- Rendered dynamically by script.js?v=8 -->
+        </div>
+
+        <div class="spotlight-footer-cta">
+          <a href="shop.html" class="btn btn-primary btn-lg shadow-glow">Explore All 14+ Handcrafted Pieces In Shop →</a>
         </div>
       </div>
     </section>
 
-    <!-- FULL SHOP / CATALOG SECTION (Ref 4) -->
-    <section class="section-shop" id="shop">
+
+    <!-- Custom Order Teaser Section -->
+    <section class="home-teaser-section">
       <div class="container">
-        
-        <!-- Clean Boutique Search Header -->
-        <div class="shop-search-container">
-          <!-- Animated Cat hidden behind search bar (Peeking Mascot) -->
-          <div class="search-cat-interactive-wrap" id="searchCatContainer">
-            <!-- Playful speech bubble on hover / focus -->
-            <div class="search-cat-speech-bubble" id="searchCatBubble" aria-hidden="true">
-              <span id="searchCatBubbleText">What treasure shall we find today?</span>
-              <div class="bubble-arrow"></div>
-            </div>
-
-            <!-- Peeking SVG Cat -->
-            <div class="search-peeking-cat" id="searchPeekingCat" title="S.bloomora Studio Kitten">
-              <svg class="search-cat-svg" viewBox="0 0 160 120" width="130" height="96" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="searchCatEarGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="#ffaec4"/>
-                    <stop offset="100%" stop-color="#ffd5e0"/>
-                  </linearGradient>
-                  <radialGradient id="searchCatBlush" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stop-color="#ff9bb2" stop-opacity="0.6"/>
-                    <stop offset="100%" stop-color="#ff9bb2" stop-opacity="0"/>
-                  </radialGradient>
-                </defs>
-
-                <!-- Soft Body / Shoulders (Hiding behind search bar pill) -->
-                <path class="cat-body-peek" d="M38 120 C38 90, 60 78, 80 78 C100 78, 122 90, 122 120 Z" fill="#ffffff" stroke="#f2cdd8" stroke-width="2.5"/>
-
-                <!-- Left Ear with Twitch Animation -->
-                <g class="search-cat-ear ear-left">
-                  <path d="M42 56 L24 16 C42 18, 58 34, 62 52 Z" fill="#ffffff" stroke="#f2cdd8" stroke-width="2.5" stroke-linejoin="round"/>
-                  <path d="M40 50 L28 22 C40 24, 52 36, 56 48 Z" fill="url(#searchCatEarGrad)"/>
-                </g>
-
-                <!-- Right Ear with Twitch Animation -->
-                <g class="search-cat-ear ear-right">
-                  <path d="M118 56 L136 16 C118 18, 102 34, 98 52 Z" fill="#ffffff" stroke="#f2cdd8" stroke-width="2.5" stroke-linejoin="round"/>
-                  <path d="M120 50 L132 22 C120 24, 108 36, 104 48 Z" fill="url(#searchCatEarGrad)"/>
-                </g>
-
-                <!-- Cat Head Group with Bob Animation -->
-                <g class="search-cat-head">
-                  <!-- Main Head Shape -->
-                  <ellipse cx="80" cy="58" rx="46" ry="36" fill="#ffffff" stroke="#f2cdd8" stroke-width="2.5"/>
-                  
-                  <!-- Floral Accent on Right Ear (Baby Pink Velvet Flower) -->
-                  <g class="cat-flower-accessory" transform="translate(112, 34) scale(0.7)">
-                    <circle cx="-6" cy="0" r="5" fill="var(--theme-primary, #ff9bb2)"/>
-                    <circle cx="6" cy="0" r="5" fill="var(--theme-primary, #ff9bb2)"/>
-                    <circle cx="0" cy="-6" r="5" fill="var(--theme-primary, #ff9bb2)"/>
-                    <circle cx="0" cy="6" r="5" fill="var(--theme-primary, #ff9bb2)"/>
-                    <circle cx="0" cy="0" r="4.2" fill="#fff4cf"/>
-                  </g>
-
-                  <!-- Blinking Kawaii Eyes -->
-                  <g class="search-cat-eyes">
-                    <!-- Left Eye -->
-                    <ellipse class="cat-eye-pupil" cx="62" cy="58" rx="6.5" ry="7.5" fill="#3a2a30"/>
-                    <circle cx="60" cy="55.5" r="2.3" fill="#ffffff"/>
-                    <circle cx="64" cy="61" r="1.1" fill="#ffffff"/>
-                    
-                    <!-- Right Eye -->
-                    <ellipse class="cat-eye-pupil" cx="98" cy="58" rx="6.5" ry="7.5" fill="#3a2a30"/>
-                    <circle cx="96" cy="55.5" r="2.3" fill="#ffffff"/>
-                    <circle cx="100" cy="61" r="1.1" fill="#ffffff"/>
-                  </g>
-
-                  <!-- Rosy Blush Cheeks -->
-                  <ellipse cx="50" cy="66" rx="9" ry="5" fill="url(#searchCatBlush)"/>
-                  <ellipse cx="110" cy="66" rx="9" ry="5" fill="url(#searchCatBlush)"/>
-
-                  <!-- Cute Pastel Nose & Cat Smile (ω) -->
-                  <path d="M77 64 L83 64 L80 67.5 Z" fill="var(--theme-primary-hover, #f07d98)"/>
-                  <path d="M76 68 C78 71, 80 71, 80 69.5 C80 71, 82 71, 84 68" stroke="var(--theme-primary-hover, #f07d98)" stroke-width="1.8" stroke-linecap="round" fill="none"/>
-
-                  <!-- Subtle Whiskers -->
-                  <line x1="30" y1="62" x2="44" y2="64" stroke="#f0c2cf" stroke-width="1.6" stroke-linecap="round"/>
-                  <line x1="28" y1="68" x2="44" y2="67" stroke="#f0c2cf" stroke-width="1.6" stroke-linecap="round"/>
-                  <line x1="130" y1="62" x2="116" y2="64" stroke="#f0c2cf" stroke-width="1.6" stroke-linecap="round"/>
-                  <line x1="132" y1="68" x2="116" y2="67" stroke="#f0c2cf" stroke-width="1.6" stroke-linecap="round"/>
-                </g>
-
-                <!-- Cute Front Paws resting on the search bar rim -->
-                <g class="search-cat-paws">
-                  <!-- Left Paw -->
-                  <g class="paw-left" transform="translate(48, 88)">
-                    <ellipse cx="0" cy="0" rx="12" ry="9" fill="#ffffff" stroke="#f2cdd8" stroke-width="2.2"/>
-                    <ellipse cx="0" cy="1" rx="5" ry="3.5" fill="#ffbccc"/>
-                    <circle cx="-4" cy="-3" r="1.5" fill="#ffbccc"/>
-                    <circle cx="0" cy="-4.5" r="1.5" fill="#ffbccc"/>
-                    <circle cx="4" cy="-3" r="1.5" fill="#ffbccc"/>
-                  </g>
-
-                  <!-- Right Paw -->
-                  <g class="paw-right" transform="translate(112, 88)">
-                    <ellipse cx="0" cy="0" rx="12" ry="9" fill="#ffffff" stroke="#f2cdd8" stroke-width="2.2"/>
-                    <ellipse cx="0" cy="1" rx="5" ry="3.5" fill="#ffbccc"/>
-                    <circle cx="-4" cy="-3" r="1.5" fill="#ffbccc"/>
-                    <circle cx="0" cy="-4.5" r="1.5" fill="#ffbccc"/>
-                    <circle cx="4" cy="-3" r="1.5" fill="#ffbccc"/>
-                  </g>
-                </g>
-              </svg>
-            </div>
-          </div>
-
-          <div class="search-input-pill">
-            <svg class="search-prefix-svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="11" cy="11" r="8"></circle>
-              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-            </svg>
-            <input type="text" id="catalogSearchInput" placeholder="Search by flower type, fairy lamp, or craft..." autocomplete="off" />
-            <button class="search-clear-btn" id="searchClearBtn" title="Clear search" aria-label="Clear search" hidden>✕</button>
-            <button class="search-submit-btn" id="searchSubmitBtn" aria-label="Search items">
-              <span>Search</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Filter Chips Bar -->
-        <div class="filter-chips-bar" id="categoryChipsRow">
-          <button class="chip-btn active" data-filter="All">All Pieces</button>
-          <button class="chip-btn" data-filter="Lamps">Fairy Lamps</button>
-          <button class="chip-btn" data-filter="Pots">Floral Pots</button>
-          <button class="chip-btn" data-filter="Dolls">Dolls</button>
-          <button class="chip-btn" data-filter="Keychains">Keychains</button>
-          <button class="chip-btn" data-filter="Hair Clips">Hair Clips</button>
-          <button class="chip-btn" data-filter="Bouquets">Forever Bouquets</button>
-        </div>
-
-        <!-- Main Catalog Two-Column Layout (Sidebar Filters + Products Grid) -->
-        <div class="shop-layout">
-          <!-- Mobile Filter Accordion Toggle Button (Shown on Tablet & Mobile) -->
-          <button type="button" class="mobile-filter-drawer-toggle" id="mobileFilterToggleBtn" aria-expanded="false" aria-controls="shopSidebar">
-            <div class="toggle-btn-content">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
-              </svg>
-              <span>Filter & Refine Pieces</span>
-            </div>
-            <div class="toggle-btn-meta">
-              <span class="filter-count-badge" id="activeFiltersBadge">All</span>
-              <svg class="filter-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </div>
-          </button>
-
-          <!-- Left Sidebar Filters (Ref 4) -->
-          <aside class="shop-sidebar" id="shopSidebar">
-            <div class="sidebar-header">
-              <h3 class="sidebar-title">Filters</h3>
-              <button class="btn-text-sm" id="resetFiltersBtn">Reset All</button>
-            </div>
-
-            <!-- Filter: Category Checkboxes -->
-            <div class="filter-group">
-              <h4 class="filter-label">Categories</h4>
-              <div class="checkbox-list">
-                <label class="custom-checkbox">
-                  <input type="checkbox" name="catFilter" value="Lamps" checked />
-                  <span class="checkmark"></span>
-                  <span class="box-label">Fairy Lamps</span>
-                  <span class="box-count" id="countLamps">(4)</span>
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" name="catFilter" value="Pots" checked />
-                  <span class="checkmark"></span>
-                  <span class="box-label">Floral Pots</span>
-                  <span class="box-count" id="countPots">(4)</span>
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" name="catFilter" value="Dolls" checked />
-                  <span class="checkmark"></span>
-                  <span class="box-label">Artisan Dolls</span>
-                  <span class="box-count" id="countDolls">(2)</span>
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" name="catFilter" value="Keychains" checked />
-                  <span class="checkmark"></span>
-                  <span class="box-label">Keychains</span>
-                  <span class="box-count" id="countKeychains">(2)</span>
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" name="catFilter" value="Hair Clips" checked />
-                  <span class="checkmark"></span>
-                  <span class="box-label">Hair Clips</span>
-                  <span class="box-count" id="countHairClips">(1)</span>
-                </label>
-                <label class="custom-checkbox">
-                  <input type="checkbox" name="catFilter" value="Bouquets" checked />
-                  <span class="checkmark"></span>
-                  <span class="box-label">Forever Bouquets</span>
-                  <span class="box-count" id="countBouquets">(2)</span>
-                </label>
-              </div>
-            </div>
-
-            <!-- Filter: Price Range Slider -->
-            <div class="filter-group">
-              <div class="price-header">
-                <h4 class="filter-label">Price Range</h4>
-                <span class="price-display" id="priceRangeDisplay">Up to Rs 6,000</span>
-              </div>
-              <div class="range-slider-wrapper">
-                <input type="range" id="priceRangeSlider" min="500" max="6000" step="100" value="6000" />
-              </div>
-              <div class="range-bounds">
-                <span>Rs 500</span>
-                <span>Rs 6,000</span>
-              </div>
-            </div>
-
-            <!-- Filter: Color Swatches -->
-            <div class="filter-group">
-              <h4 class="filter-label">Color Palette</h4>
-              <div class="color-swatches" id="colorSwatchesGroup">
-                <button class="color-swatch-btn active" data-color="all" title="All Colors">All</button>
-                <button class="color-swatch-btn" data-color="pink" title="Baby Pink" style="background:#ffb6c1"></button>
-                <button class="color-swatch-btn" data-color="cream" title="Warm Cream" style="background:#fff4e6"></button>
-                <button class="color-swatch-btn" data-color="yellow" title="Sunflower Yellow" style="background:#ffe066"></button>
-                <button class="color-swatch-btn" data-color="green" title="Sage Green" style="background:#b2d8b2"></button>
-                <button class="color-swatch-btn" data-color="blue" title="Pastel Blue" style="background:#c5e3f6"></button>
-                <button class="color-swatch-btn" data-color="purple" title="Lilac" style="background:#dfccf1"></button>
-              </div>
-            </div>
-
-            <!-- Filter: Size -->
-            <div class="filter-group">
-              <h4 class="filter-label">Dimensions</h4>
-              <div class="size-pill-group">
-                <button class="size-pill active" data-size="all">All Sizes</button>
-                <button class="size-pill" data-size="Small">Small (~10 cm)</button>
-                <button class="size-pill" data-size="Medium">Medium (~15 cm)</button>
-                <button class="size-pill" data-size="Large">Large (~25 cm)</button>
-              </div>
-            </div>
-
-            <!-- Boutique Recommendation Card -->
-            <div class="sidebar-mascot-card">
-              <span class="sidebar-card-label">Studio Recommendation</span>
-              <p class="mascot-whisper">"Looking for our most beloved piece? The <strong>Lotus Fairy Lamp</strong> is our signature customer favourite."</p>
-              <button class="btn btn-secondary btn-sm" id="sidebarRecommendBtn">View Featured Piece</button>
-            </div>
-          </aside>
-
-          <!-- Right Products Catalog Container -->
-          <div class="shop-main">
-            <!-- Catalog Top Bar -->
-            <div class="catalog-top-bar">
-              <div class="results-meta">
-                <span class="results-heading" id="resultsCountText">Showing all handmade treasures</span>
-              </div>
-              
-              <div class="sort-selector-wrapper">
-                <label for="catalogSortSelect">Sort by:</label>
-                <select id="catalogSortSelect" class="custom-select">
-                  <option value="popular">Most Popular</option>
-                  <option value="rating">Customer Rating</option>
-                  <option value="price-low">Price: Low to High</option>
-                  <option value="price-high">Price: High to Low</option>
-                  <option value="newest">Newest Additions</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Product Grid -->
-            <div class="product-grid" id="mainProductGrid">
-              <!-- Rendered dynamically by script.js -->
-            </div>
-
-            <!-- Empty State Display -->
-            <div class="empty-state-card" id="catalogEmptyState" hidden>
-              <div class="empty-icon-wrap">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-              </div>
-              <h3>No pieces match your search</h3>
-              <p>Try resetting filters or searching for popular terms like "lamp", "pot", or "tulip".</p>
-              <button class="btn btn-primary" id="clearSearchStateBtn">Reset Search & Filters</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CUSTOM ORDER CRAFT BUILDER SECTION (Ref 2) -->
-    <section class="section-custom-order" id="custom-order">
-      <div class="container">
-        <div class="custom-order-wrapper">
-          <div class="custom-order-header text-center">
-            <span class="order-badge">Bespoke Commissions</span>
-            <h2 class="section-title">Custom Order Request</h2>
-            <p class="section-subtitle">Have a personalized color scheme or unique gift concept? Let our artisans sculpt it for you.</p>
-          </div>
-
-          <form class="custom-order-card" id="customOrderForm">
-            <div class="form-grid-columns">
-              <!-- Left Column: Item Selection & Customization -->
-              <div class="form-col-left">
-                <!-- Step 1: Craft Type -->
-                <div class="custom-field-group">
-                  <label class="field-heading">1. Select Desired Craft Type</label>
-                  <div class="craft-radio-grid">
-                    <label class="craft-radio-card active">
-                      <input type="radio" name="craftType" value="Fairy Lamp" checked />
-                      <span class="radio-name">Fairy Lamp</span>
-                      <span class="radio-price">From Rs 3,800</span>
-                    </label>
-
-                    <label class="craft-radio-card">
-                      <input type="radio" name="craftType" value="Floral Pot" />
-                      <span class="radio-name">Floral Pot</span>
-                      <span class="radio-price">From Rs 2,500</span>
-                    </label>
-
-                    <label class="craft-radio-card">
-                      <input type="radio" name="craftType" value="Handmade Doll" />
-                      <span class="radio-name">Artisan Doll</span>
-                      <span class="radio-price">From Rs 3,200</span>
-                    </label>
-
-                    <label class="craft-radio-card">
-                      <input type="radio" name="craftType" value="Keychain / Charm" />
-                      <span class="radio-name">Charm Keychain</span>
-                      <span class="radio-price">From Rs 800</span>
-                    </label>
-
-                    <label class="craft-radio-card">
-                      <input type="radio" name="craftType" value="Bouquet" />
-                      <span class="radio-name">Forever Bouquet</span>
-                      <span class="radio-price">From Rs 2,800</span>
-                    </label>
-
-                    <label class="craft-radio-card">
-                      <input type="radio" name="craftType" value="Other" />
-                      <span class="radio-name">Bespoke Design</span>
-                      <span class="radio-price">Custom Quote</span>
-                    </label>
-                  </div>
-                </div>
-
-                <!-- Step 2: Color Palette -->
-                <div class="custom-field-group">
-                  <label class="field-heading">2. Choose Desired Color Palette</label>
-                  <div class="custom-color-palette-picker">
-                    <label class="palette-option active">
-                      <input type="radio" name="customPalette" value="Baby Pink & Cream" checked />
-                      <span class="palette-swatch-dual" style="--c1:#ffb6c1; --c2:#fffdfb"></span>
-                      <span>Baby Pink & Cream</span>
-                    </label>
-                    <label class="palette-option">
-                      <input type="radio" name="customPalette" value="Rose & Sage Green" />
-                      <span class="palette-swatch-dual" style="--c1:#e86b8c; --c2:#b2d8b2"></span>
-                      <span>Rose & Sage Green</span>
-                    </label>
-                    <label class="palette-option">
-                      <input type="radio" name="customPalette" value="Sunshine & Ivory" />
-                      <span class="palette-swatch-dual" style="--c1:#ffd166; --c2:#fef9ef"></span>
-                      <span>Sunshine & Ivory</span>
-                    </label>
-                    <label class="palette-option">
-                      <input type="radio" name="customPalette" value="Sky Blue & Lilac" />
-                      <span class="palette-swatch-dual" style="--c1:#a0c4ff; --c2:#bdb2ff"></span>
-                      <span>Sky Blue & Lilac</span>
-                    </label>
-                  </div>
-                </div>
-
-                <!-- Step 3: Special Details & Notes -->
-                <div class="custom-field-group">
-                  <label class="field-heading" for="customNotes">3. Personalization & Notes</label>
-                  <textarea id="customNotes" class="custom-textarea" rows="3" placeholder="Describe flower types, color accents, recipient names, or occasion (birthday, anniversary, desk decor)..."></textarea>
-                </div>
-              </div>
-
-              <!-- Right Column: Reference Upload & Contact Info -->
-              <div class="form-col-right">
-                <!-- Reference Image Upload Box (Ref 2) -->
-                <div class="custom-field-group">
-                  <label class="field-heading">Reference Photo or Sketch (Optional)</label>
-                  <div class="file-dropzone" id="fileDropzone">
-                    <input type="file" id="customFile" accept="image/*" class="file-input-hidden" />
-                    <div class="dropzone-inner" id="dropzoneContent">
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin: 0 auto 6px;">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                        <polyline points="17 8 12 3 7 8"></polyline>
-                        <line x1="12" y1="3" x2="12" y2="15"></line>
-                      </svg>
-                      <p><strong>Click to upload</strong> or drag & drop</p>
-                      <small>PNG, JPG, or WEBP up to 5MB</small>
-                    </div>
-                    <div class="file-preview-wrap" id="filePreviewWrap" hidden>
-                      <img id="filePreviewImg" alt="Custom reference preview" />
-                      <button type="button" class="btn-remove-file" id="removeFileBtn">✕ Remove Image</button>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Contact Details -->
-                <div class="custom-field-group">
-                  <label class="field-heading">Contact Information</label>
-                  <div class="input-stack">
-                    <input type="text" class="custom-input" id="customName" placeholder="Full Name *" required />
-                    <input type="tel" class="custom-input" id="customPhone" placeholder="WhatsApp / Mobile Number *" required />
-                    <input type="email" class="custom-input" id="customEmail" placeholder="Email Address *" required />
-                  </div>
-                </div>
-
-                <!-- Live Price Estimate Card -->
-                <div class="estimate-box">
-                  <div class="estimate-row">
-                    <span>Estimated Crafting Window:</span>
-                    <strong>2 - 4 Business Days</strong>
-                  </div>
-                  <div class="estimate-row">
-                    <span>Base Estimate:</span>
-                    <strong class="price-val" id="customEstimatedPrice">Rs 3,800</strong>
-                  </div>
-                  <small class="estimate-note">Final price and delivery timeline confirmed on WhatsApp before crafting begins.</small>
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-lg full-width shadow-glow">
-                  <span>Submit Custom Commission</span>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- TRACK YOUR ORDER SECTION (Ref 2) -->
-    <section class="section-tracker" id="track-order">
-      <div class="container">
-        <div class="tracker-card">
-          <div class="tracker-header text-center">
-            <span class="section-eyebrow">Parcel Dispatch Service</span>
-            <h2 class="section-title">Track Your Order</h2>
-            <p class="section-subtitle">Enter your Order Tracking ID from your confirmation message or email.</p>
-          </div>
-
-          <!-- Order Search Bar -->
-          <form class="tracker-input-form" id="trackerForm">
-            <div class="tracker-input-wrap">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="track-icon">
-                <rect x="1" y="3" width="15" height="13"></rect>
-                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
-                <circle cx="5.5" cy="18.5" r="2.5"></circle>
-                <circle cx="18.5" cy="18.5" r="2.5"></circle>
-              </svg>
-              <input type="text" id="orderTrackInput" placeholder="Enter order ID (e.g. SB-2026-88)" value="SB-2026-88" required />
-              <button type="submit" class="btn btn-primary" id="trackBtn">
-                <span>Track Order</span>
-              </button>
-            </div>
-            <div class="sample-orders">
-              <span>Sample orders:</span>
-              <button type="button" class="btn-sample-code" data-code="SB-2026-88">SB-2026-88 (Shipped)</button>
-              <button type="button" class="btn-sample-code" data-code="SB-2026-92">SB-2026-92 (Delivered)</button>
-              <button type="button" class="btn-sample-code" data-code="SB-2026-75">SB-2026-75 (Handcrafting)</button>
-            </div>
-          </form>
-
-          <!-- Tracker Progress Timeline (Ref 2) -->
-          <div class="tracker-status-display" id="trackerTimeline">
-            <div class="order-summary-pill">
-              <div class="order-summary-item">
-                <span class="sum-label">Order:</span>
-                <strong id="trackDisplayId">SB-2026-88</strong>
-              </div>
-              <div class="order-summary-item">
-                <span class="sum-label">Items:</span>
-                <strong id="trackDisplayItems">Lotus Fairy Lamp, Tulip Pot</strong>
-              </div>
-              <div class="order-summary-item">
-                <span class="sum-label">Destination:</span>
-                <strong id="trackDisplayDest">Lahore, Punjab</strong>
-              </div>
-            </div>
-
-            <!-- Stepper Timeline -->
-            <div class="tracker-stepper">
-              <div class="step-item completed" data-step="1">
-                <div class="step-icon-wrap">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                </div>
-                <div class="step-content">
-                  <h4>Order Placed</h4>
-                  <small id="stepDate1">6 Nov, 10:30 AM</small>
-                </div>
-              </div>
-
-              <div class="step-item completed" data-step="2">
-                <div class="step-icon-wrap">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><line x1="20" y1="4" x2="8.12" y2="15.88"></line><line x1="14.47" y1="14.48" x2="20" y2="20"></line><line x1="8.12" y1="8.12" x2="12" y2="12"></line></svg>
-                </div>
-                <div class="step-content">
-                  <h4>Handcrafting</h4>
-                  <small id="stepDate2">7 Nov, 02:15 PM</small>
-                </div>
-              </div>
-
-              <div class="step-item active" data-step="3">
-                <div class="step-icon-wrap">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
-                </div>
-                <div class="step-content">
-                  <h4>Dispatched</h4>
-                  <small id="stepDate3">8 Nov, 11:00 AM</small>
-                </div>
-              </div>
-
-              <div class="step-item" data-step="4">
-                <div class="step-icon-wrap">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
-                </div>
-                <div class="step-content">
-                  <h4>Out for Delivery</h4>
-                  <small id="stepDate4">9 Nov (Estimated)</small>
-                </div>
-              </div>
-
-              <div class="step-item" data-step="5">
-                <div class="step-icon-wrap">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                </div>
-                <div class="step-content">
-                  <h4>Delivered</h4>
-                  <small id="stepDate5">Pending</small>
-                </div>
-              </div>
-            </div>
-
-            <div class="tracker-cheer">
-              <p>"Your order is packaged in triple-cushioned protective bubble wrap to ensure every petal arrives in mint condition."</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ABOUT STORY SECTION (Ref 2 & 3) -->
-    <section class="section-about" id="about">
-      <div class="container">
-        <div class="about-grid">
-          <!-- Story Photo with Rotated Frame & Shadow -->
-          <div class="about-photo-wrapper">
-            <div class="polaroid-frame">
-              <img src="assets/bouquet.jpg" alt="Artisan handcrafting velvet pipe cleaner bouquet" class="about-img" />
-              <div class="polaroid-caption">
-                <span>Handmade with Love • Studio Collection</span>
-              </div>
-            </div>
-            <div class="about-floating-sticker">
-              <small>Small hands<br>Big dreams</small>
-            </div>
-          </div>
-
-          <!-- Story Text Content -->
-          <div class="about-copy">
-            <div class="section-eyebrow">
-              <span>Our Studio Story</span>
-            </div>
-            <h2 class="section-title">
-              Made by hand.<br>
-              Made to be treasured.
-            </h2>
-            <p class="about-paragraph">
-              <strong>S.bloomora</strong> was founded on a simple vision: to turn tactile, soft materials like velvet pipe cleaners into lasting pieces of heartwarming art that never wither.
+        <div class="home-teaser-card">
+          <div class="home-teaser-content">
+            <span class="home-teaser-badge">Bespoke Atelier Service</span>
+            <h2 class="home-teaser-title">Design Your Dream Velvet Flower Craft</h2>
+            <p class="home-teaser-desc">
+              Looking for a custom flower pot with your favorite color palette, a romantic fairy lamp, or an adorable bespoke doll for someone special? Our artisans hand-twist and sculpt bespoke pieces to order.
             </p>
-            <p class="about-paragraph">
-              Unlike fresh flowers that fade in days, our handcrafted floral pots and illuminated fairy lamps remain vibrant for years. We believe in intentional crafting, bespoke color palettes, and the enduring charm of tactile handmade gifts.
-            </p>
-
-            <!-- 4 Pillar Features (Ref 2) -->
-            <div class="about-pillars-grid">
-              <div class="pillar-box">
-                <h4>Handmade with Care</h4>
-                <p>Every petal shaped individually with precision</p>
-              </div>
-              <div class="pillar-box">
-                <h4>Unique Creations</h4>
-                <p>Distinct artisanal aesthetics designed to endure</p>
-              </div>
-              <div class="pillar-box">
-                <h4>Conscious Materials</h4>
-                <p>Reusable materials & low-waste crafting workflow</p>
-              </div>
-              <div class="pillar-box">
-                <h4>Independent Studio</h4>
-                <p>Empowering local independent female artisans</p>
-              </div>
+            <ul class="home-features-list">
+              <li>Choose custom velvet colors, flower types & arrangements</li>
+              <li>Optional built-in warm LED fairy lights with switch</li>
+              <li>Complimentary handwritten gift card & luxe satin ribbon box</li>
+              <li>Photo & video progress preview before courier dispatch</li>
+            </ul>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <a href="custom-order.html" class="btn btn-primary btn-lg shadow-glow">Start Custom Commission →</a>
+              <a href="gallery.html" class="btn btn-outline btn-lg">View Studio Gallery</a>
             </div>
+          </div>
+          <div class="home-teaser-media">
+            <img src="assets/Velvet Flower Craft Dreams.png" alt="Custom order handcrafted floral craft" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="about-actions">
-              <a href="#shop" class="btn btn-primary">
-                <span>Explore Creations</span>
-                <span>→</span>
-              </a>
-              <a href="#contact" class="btn btn-outline">
-                <span>Get in Touch</span>
-              </a>
+    <!-- Our Story Teaser Section -->
+    <section class="home-teaser-section" style="padding-top: 0;">
+      <div class="container">
+        <div class="home-teaser-card reverse">
+          <div class="home-teaser-media">
+            <img src="assets/Velvet Blooms That Last.png" alt="Behind the scenes pipe cleaner craft studio" loading="lazy" />
+          </div>
+          <div class="home-teaser-content">
+            <span class="home-teaser-badge">Slow Craftsmanship</span>
+            <h2 class="home-teaser-title">Blooms That Never Wilt. Moments That Last.</h2>
+            <p class="home-teaser-desc">
+              At S.bloomora, every single petal is gently curved and shaped by hand using ultra-plush velvet pipe cleaners. Unlike fresh flowers that wilt in days or cold plastic bouquets, our handcrafted creations bring soft warmth, tactile comfort, and forever romance to your space.
+            </p>
+            <ul class="home-features-list">
+              <li>100% handmade in Pakistan with meticulous attention to detail</li>
+              <li>Zero water or sunlight needed — stays vibrant forever</li>
+              <li>Hypoallergenic, dust-resistant, and silky to touch</li>
+            </ul>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <a href="about.html" class="btn btn-secondary btn-lg">Read Our Full Story →</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CRAFT GALLERY (Ref 2) -->
-    <section class="section-gallery" id="gallery">
+    <!-- Studio Lookbook Teaser Section -->
+    <section class="home-teaser-section" style="padding-top: 0;">
       <div class="container">
         <div class="section-header text-center">
-          <div class="section-eyebrow">
-            <span>Studio Showcase</span>
-          </div>
-          <h2 class="section-title">Craft Gallery</h2>
-          <p class="section-subtitle">A glimpse into recent custom creations and illuminated fairy lamps.</p>
+          <div class="section-eyebrow"><span>Visual Inspirations</span></div>
+          <h2 class="section-title">Studio Lookbook & Cozy Corners</h2>
+          <p class="section-subtitle">A glimpse into how our floral lamps and pots brighten nightstands and desks.</p>
         </div>
-
-        <!-- Gallery Filter Chips (Ref 2) -->
-        <div class="gallery-filters" id="galleryFilters">
-          <button class="g-filter active" data-gfilter="all">All Pieces</button>
-          <button class="g-filter" data-gfilter="lamps">Fairy Lamps</button>
-          <button class="g-filter" data-gfilter="pots">Floral Pots</button>
-          <button class="g-filter" data-gfilter="dolls">Dolls</button>
-          <button class="g-filter" data-gfilter="keychains">Keychains</button>
-          <button class="g-filter" data-gfilter="bouquets">Bouquets</button>
-        </div>
-
-        <!-- Gallery Grid -->
-        <div class="gallery-masonry" id="galleryGrid">
-          <div class="gallery-item" data-category="lamps">
-            <img src="assets/mushroom-lamp.jpg" alt="Handmade mushroom fairy lamp" loading="lazy" />
-            <div class="gallery-overlay">
-              <h4>Mushroom Cottage Lamp</h4>
-              <span>Ambient bedside nightlight</span>
+        <div class="gallery-masonry" style="margin-bottom: 30px;">
+          <div class="gallery-item" style="display: block;">
+            <div class="gallery-thumb-card">
+              <img src="assets/tulip-pot.jpg" alt="Tulip Pot" loading="lazy" />
+              <div class="gallery-overlay">
+                <span class="gallery-tag">Desk Decor</span>
+                <h4>Tulip Velvet Floral Pot</h4>
+              </div>
             </div>
           </div>
-
-          <div class="gallery-item" data-category="lamps">
-            <img src="assets/jellyfish-lamp.jpg" alt="Handmade glowing jellyfish lamp" loading="lazy" />
-            <div class="gallery-overlay">
-              <h4>Jellyfish Ambient Lamp</h4>
-              <span>Cascading illuminated tentacles</span>
+          <div class="gallery-item" style="display: block;">
+            <div class="gallery-thumb-card">
+              <img src="assets/daisy-lamp.jpg" alt="Daisy Lamp" loading="lazy" />
+              <div class="gallery-overlay">
+                <span class="gallery-tag">Ambient Nightstand</span>
+                <h4>Daisy Fairytale Lamp</h4>
+              </div>
             </div>
           </div>
-
-          <div class="gallery-item" data-category="pots">
-            <img src="assets/sunflower-pot.jpg" alt="Handmade sunflower desk pot" loading="lazy" />
-            <div class="gallery-overlay">
-              <h4>Sunflower Desk Pot</h4>
-              <span>Everlasting floral sunshine</span>
-            </div>
-          </div>
-
-          <div class="gallery-item" data-category="dolls">
-            <img src="assets/doll.jpg?v=2" alt="Handmade cute doll" loading="lazy" />
-            <div class="gallery-overlay">
-              <h4>Artisan Braided Doll</h4>
-              <span>Soft yarn & lace heirloom</span>
-            </div>
-          </div>
-
-          <div class="gallery-item" data-category="lamps">
-            <img src="assets/lotus-lamp.jpg" alt="Lotus bloom fairy lamp" loading="lazy" />
-            <div class="gallery-overlay">
-              <h4>Lotus Fairy Lamp</h4>
-              <span>Signature glowing bloom</span>
-            </div>
-          </div>
-
-          <div class="gallery-item" data-category="pots">
-            <img src="assets/tulip-pot.jpg" alt="Tulip flower pot on lace doily" loading="lazy" />
-            <div class="gallery-overlay">
-              <h4>Baby Pink Tulip Pot</h4>
-              <span>Velvet pipe cleaners & satin bow</span>
-            </div>
-          </div>
-
-          <div class="gallery-item" data-category="keychains">
-            <img src="assets/keychain.jpg" alt="Flower and cat paw keychain" loading="lazy" />
-            <div class="gallery-overlay">
-              <h4>Daisy Charm Keychain</h4>
-              <span>Handcrafted pocket accessory</span>
-            </div>
-          </div>
-
-          <div class="gallery-item" data-category="bouquets">
-            <img src="assets/tulip-bouquet.jpg" alt="Pink tulip forever bouquet" loading="lazy" />
-            <div class="gallery-overlay">
-              <h4>Forever Tulip Bouquet</h4>
-              <span>Artisan floral arrangement</span>
-            </div>
-          </div>
-
-          <div class="gallery-item" data-category="pots">
-            <img src="assets/lily-pot.jpg?v=2" alt="White and pink lily pot" loading="lazy" />
-            <div class="gallery-overlay">
-              <h4>Lily of the Valley Pot</h4>
-              <span>Illuminated bell blossoms</span>
+          <div class="gallery-item" style="display: block;">
+            <div class="gallery-thumb-card">
+              <img src="assets/blossom-bouquet.jpg" alt="Blossom Bouquet" loading="lazy" />
+              <div class="gallery-overlay">
+                <span class="gallery-tag">Everlasting Gift</span>
+                <h4>Spring Blossom Bouquet</h4>
+              </div>
             </div>
           </div>
         </div>
-
-        <div class="gallery-footer text-center">
-          <p class="gallery-footer-note">New seasonal arrangements released every week.</p>
+        <div class="text-center">
+          <a href="gallery.html" class="btn btn-outline btn-lg">Explore Full Studio Gallery (12+ Moments) →</a>
         </div>
       </div>
     </section>
 
-    <!-- CUSTOMER REVIEWS -->
-    <section class="section-reviews">
+    <!-- Order Tracker Quick Banner -->
+    <section class="section-tracker-teaser">
+      <div class="container">
+        <div class="tracker-teaser-card text-center">
+          <div class="section-eyebrow">
+            <span>Real-Time Transparency</span>
+          </div>
+          <h2 class="section-title">Track Your Handcrafted Package</h2>
+          <p class="section-subtitle">
+            Already placed an order? Track its journey live from artisan crafting to quality inspection and doorstep courier delivery.
+          </p>
+          <div class="tracker-teaser-actions">
+            <a href="track-order.html" class="btn btn-primary btn-lg shadow-glow">Track Your Order Live →</a>
+            <a href="contact.html" class="btn btn-outline btn-lg">Contact Concierge</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="section-reviews">
       <div class="container">
         <div class="section-header text-center">
           <div class="section-eyebrow">
@@ -1257,107 +653,7 @@
         </div>
       </div>
     </section>
-
-    <!-- CONTACT US SECTION (Ref 2) -->
-    <section class="section-contact" id="contact">
-      <div class="container">
-        <div class="contact-card">
-          <div class="contact-header text-center">
-            <span class="contact-eyebrow">Get in Touch</span>
-            <h2 class="section-title">Contact Us</h2>
-            <p class="section-subtitle">Questions regarding custom commissions, parcel status, or bulk gift orders?</p>
-          </div>
-
-          <div class="contact-grid">
-            <!-- Left Info Channels (Ref 2) -->
-            <div class="contact-info-col">
-              <a href="https://wa.me/923001234567" target="_blank" class="contact-channel-card whatsapp-card">
-                <div class="ch-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-                  </svg>
-                </div>
-                <div class="ch-info">
-                  <strong>WhatsApp Studio Support</strong>
-                  <span>+92 300 1234567</span>
-                  <small>Daily 10:00 AM – 10:00 PM</small>
-                </div>
-              </a>
-
-              <a href="https://instagram.com" target="_blank" class="contact-channel-card instagram-card">
-                <div class="ch-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                  </svg>
-                </div>
-                <div class="ch-info">
-                  <strong>Instagram Direct</strong>
-                  <span>@s.bloomora</span>
-                  <small>Behind-the-scenes crafting reels</small>
-                </div>
-              </a>
-
-              <a href="mailto:hello@sbloomora.com" class="contact-channel-card email-card">
-                <div class="ch-icon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
-                  </svg>
-                </div>
-                <div class="ch-info">
-                  <strong>Studio Email</strong>
-                  <span>hello@sbloomora.com</span>
-                  <small>Wholesale & corporate inquiries</small>
-                </div>
-              </a>
-
-              <div class="contact-mascot-cheer">
-                <p>"Every message is read and responded to promptly by our crafting team."</p>
-              </div>
-            </div>
-
-            <!-- Right Message Form (Ref 2) -->
-            <form class="contact-form-col" id="contactMessageForm">
-              <h3 class="form-title">Send Us a Direct Message</h3>
-
-              <div class="form-group">
-                <label for="contactName">Your Name</label>
-                <input type="text" id="contactName" class="custom-input" placeholder="e.g. Fatima Ali" required />
-              </div>
-
-              <div class="form-group">
-                <label for="contactEmail">Email Address</label>
-                <input type="email" id="contactEmail" class="custom-input" placeholder="you@example.com" required />
-              </div>
-
-              <div class="form-group">
-                <label for="contactSubject">Subject</label>
-                <select id="contactSubject" class="custom-select">
-                  <option value="general">General Inquiry</option>
-                  <option value="order">Order Tracking & Status</option>
-                  <option value="custom">Custom Commission Idea</option>
-                  <option value="gift">Special Gift Packaging</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="contactMessage">Message</label>
-                <textarea id="contactMessage" class="custom-textarea" rows="4" placeholder="How can our studio assist you?" required></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary btn-lg shadow-glow full-width">
-                <span>Send Message</span>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- NEWSLETTER BANNER (Ref 3 & 4) -->
-    <section class="section-newsletter">
+<section class="section-newsletter">
       <div class="container">
         <div class="newsletter-card">
           <div class="newsletter-content">
@@ -1382,16 +678,13 @@
         </div>
       </div>
     </section>
-
   </main>
-
-  <!-- SITE FOOTER -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top-grid">
         <!-- Brand & Bio -->
         <div class="footer-brand-col">
-          <a href="#home" class="brand-logo">
+          <a href="index.html" class="brand-logo">
             <div class="logo-mark mini">
               <svg viewBox="0 0 100 80" width="24" height="20" fill="none">
                 <circle cx="50" cy="40" r="14" fill="var(--theme-primary)"/>
@@ -1403,7 +696,7 @@
             </div>
           </a>
           <p class="footer-bio">
-            Thoughtfully crafted velvet pipe-cleaner floral decor, fairy lamps, and cute room treasures. Handcrafted with heart and patience in Pakistan.
+            Thoughtfully crafted velvet pipe-cleaner floral decor, ambient fairy lamps, and cute room treasures. Handcrafted with heart and patience in Pakistan.
           </p>
           <div class="social-pills">
             <a href="https://instagram.com" target="_blank" aria-label="Instagram">
@@ -1425,11 +718,11 @@
         <div class="footer-links-col">
           <h4 class="footer-heading">Explore</h4>
           <ul class="footer-nav">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#shop">Shop All</a></li>
-            <li><a href="#custom-order">Custom Commissions</a></li>
-            <li><a href="#track-order">Track Your Order</a></li>
-            <li><a href="#gallery">Studio Gallery</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop All Items</a></li>
+            <li><a href="custom-order.html">Custom Commissions</a></li>
+            <li><a href="track-order.html">Track Your Order</a></li>
+            <li><a href="gallery.html">Studio Lookbook Gallery</a></li>
           </ul>
         </div>
 
@@ -1437,11 +730,11 @@
         <div class="footer-links-col">
           <h4 class="footer-heading">Customer Care</h4>
           <ul class="footer-nav">
-            <li><a href="#contact">Contact Support</a></li>
-            <li><a href="#track-order">Shipping & Tracking</a></li>
-            <li><a href="#about">Craft Care Guide</a></li>
-            <li><a href="#custom-order">Gift Packaging Service</a></li>
-            <li><a href="#contact">Frequently Asked Questions</a></li>
+            <li><a href="contact.html">Contact & Support</a></li>
+            <li><a href="track-order.html">Shipping & Tracking</a></li>
+            <li><a href="about.html">Our Story & Care Guide</a></li>
+            <li><a href="custom-order.html">Gift Packaging Service</a></li>
+            <li><a href="contact.html#faq">Frequently Asked Questions</a></li>
           </ul>
         </div>
 
@@ -1467,8 +760,7 @@
       </div>
     </div>
   </footer>
-
-  <!-- ============================================== -->
+<!-- ============================================== -->
   <!-- MODALS & DRAWERS SYSTEM                         -->
   <!-- ============================================== -->
 
@@ -1643,7 +935,7 @@
 
     <!-- Cart Item List Container -->
     <div class="cart-items-container" id="cartItemsList">
-      <!-- Dynamically filled by script.js -->
+      <!-- Dynamically filled by script.js?v=8 -->
     </div>
 
     <!-- Cart Footer with Subtotal & Checkout -->
@@ -1974,7 +1266,7 @@
       </div>
 
       <div class="studio-footer-note">
-        <span>All CSS color variables are declared in <code>styles.css</code> under <code>:root</code> for total design freedom.</span>
+        <span>All CSS color variables are declared in <code>styles.css?v=8</code> under <code>:root</code> for total design freedom.</span>
       </div>
     </div>
   </aside>
@@ -2000,6 +1292,6 @@
   <div class="toast-container" id="toastContainer" role="status" aria-live="polite"></div>
 
   <!-- JavaScript File -->
-  <script src="script.js"></script>
+  <script src="script.js?v=8"></script>
 </body>
 </html>
